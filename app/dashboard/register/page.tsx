@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Page() {
+export default function Register() {
   return (
     <div className='container-m'>page</div>
   )
