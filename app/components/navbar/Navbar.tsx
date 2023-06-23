@@ -41,20 +41,20 @@ const links = [
 export default function Navbar() {
   return (
     <nav className="h-28 flex justify-between items-start ">
-      <Link href="/" className="font-bold  text-xl">
+      <Link href="/" className="font-bold pt-1 text-xl">
         lamamia
       </Link>
-      <div className="flex justify-between   gap-x-2">
+      <div className="flex justify-between">
         {links.map((eachLink) => {
           return (
-            <Link className="" key={eachLink.id} href={eachLink.url}>
+            <Link className="hover:bg-white/10 rounded-full p-2 duration-200 " key={eachLink.id} href={eachLink.url}>
               {eachLink.title}
             </Link>
           );
         })}
         <button
          onClick={() => console.log("log out")}
-         className="bg-white/20 px-2 "
+         className="bg-white/20 rounded-full px-2 "
          >Log out</button>
       </div>
     </nav>
