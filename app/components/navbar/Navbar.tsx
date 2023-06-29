@@ -3,7 +3,7 @@
 import Link from "next/link";
 import React from "react";
 // import styles from "./navbar.module.css";
-// import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
+import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 // import { signOut, useSession } from "next-auth/react";
 const links = [
   {
@@ -44,7 +44,9 @@ export default function Navbar() {
       <Link href="/" className="font-bold pt-1 text-xl">
         lamamia
       </Link>
-      <div className="flex justify-between">
+      <div className="flex justify-between items-center">
+      <DarkModeToggle/>
+
         {links.map((eachLink) => {
           return (
             <Link className="hover:bg-white/10 rounded-full p-2 duration-200 " key={eachLink.id} href={eachLink.url}>
